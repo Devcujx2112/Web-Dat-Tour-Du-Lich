@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 70px; /* Chiều cao của header */
+}
+.container {
+    width: 100%; /* hoặc giá trị bạn muốn */
+    margin: 0 auto; /* auto sẽ tự động căn giữa */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  /* --------------------Menu----------------------- */
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: #98c5e9;
+    transition: linear 0.25s;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 70px;
+    align-items: center;
+}
+  li{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: #98c5e9;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 70px;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+  .logo{
+    flex: 1;
+  }
+  .menu{
+    flex: 3;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: background 0.3s ease;
+  }
+  .menu li {
+    max-width: 150px; /* Thay đổi giá trị theo nhu cầu của bạn */
+  }
+  
+  .menu li a {
+    color: white;       
+    font-weight: bold;  
+    transition: all 0.3s; 
+  }
+  .menu > a::before{
+    content: '';
+    width: 0;
+    height: 4px;
+    background-color: #00bec1;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: linear 0.25s;
+  }
+  .menu li:hover a {
+    color:#2095AE !important;       
+    font-size: 20px;    
+    font-weight: bolder;
+}
+  input::placeholder {
+    color: black;
+}
+.menu > li{
+    padding: 0 12px;
+    position: relative;
+}
+.menu > li:hover .sub-menu {
+    visibility: visible;
+    top: 40px;
+    width: 200px;
+}
+.sub-menu{
+    position: absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top: 0px;
+    transition: 0.3s;
+    z-index: 1;
+    background: #ffff;
+}
+.sub-menu ul{
+    padding-left: 20px;
+}
+.sub-menu li {
+    margin-bottom: 10px; /* Điều chỉnh khoảng cách giữa các dòng */
+    margin-right: -10px;
+}
+.sub-menu li ul a {
+    font-weight: normal;
+    font-size: 12px!important;
+}
+.menu  li  a {
+    font-family:'YourChosenFont', sans-serif;;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold!important;
+    display: block;
+    line-height: 20px;
+    color: #fff;
+}
+.orther{
+    flex: 1;
+    display: flex;
+}
+.orther > li {
+    padding: 0 12px;
+}
+.orther > li:first-child {
+    position: relative;
+}
+.orther > li:first-child input {
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid #98c5e9;
+    background: transparent;
+    outline: none;
+}
+.orther > li:first-child i {
+    position: absolute;
+    right: 10px;
+}
+/* ---------------------Phần sản phẩm---------------- */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột có chiều rộng bằng nhau */
+    gap: 20px; /* Khoảng cách giữa các ô */
+}
+
+.product-item {
+    background-color: #fff; /* Màu nền của mỗi ô */
+    padding: 20px;
+}
+.product-details {
+    display: flex;
+}
+/* -----------------------------Phần trái--------------------------- */
+.left-column {
+    background-color: #f0f0f0; /* Màu xám nhẹ của bạn */
+    padding: 20px; /* Điều chỉnh độ dày khoảng trắng xung quanh nội dung */
+    margin: 10px; /* Điều chỉnh khoảng cách với các phần khác */
+    border-radius: 8px; /* Bo viền góc */
+    overflow: hidden; /* Đảm bảo viền được hiển thị đúng */
+}
+.product-details .left-column {
+    flex: 1; /* Phần nhỏ bên trái chiếm 1 phần */
+    padding: 10px; /* Tăng kích thước của thẻ card bằng cách thay đổi giá trị padding */
+    margin-left: -80px;
+    padding-right: 30px;
+}
+.BoLoc {
+    display: flex;
+    flex-direction: column;
+}
+.KhuVuc {
+    background-color:#0d6efd; /* Màu xanh của bạn */
+    padding: 10px; /* Tăng độ dày của nền */
+    margin: 10px 0; /* Tăng khoảng cách với các phần khác */
+    color: white; /* Màu chữ trắng hoặc màu chữ phù hợp với bạn */
+    text-align: center; /* Căn giữa nội dung theo chiều ngang */
+    font-weight: bold;
+    border-radius: 2%;
+    overflow: hidden;
+}
+
+/* -----------------------------Phần phải--------------------------- */
+.product-details .right-column {
+    flex: 3; /* Phần lớn bên phải chiếm 3 phần */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-right: -70px;
+    padding-left: 50px;
+}
+.product-details .right-column .note {
+    background-color: #fff;
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;   
+}
+.card-img-top {
+    width: 100%;
+    height: 250px; /* Điều chỉnh chiều cao ảnh theo nhu cầu của bạn */
+    object-fit: cover; /* Giữ tỷ lệ khung ảnh và cắt đi phần thừa */
+  }
+.card-body h5 {
+    font-size: 16px; /* Chọn kích thước phù hợp với bạn */
+    color: #2d4271;
+}
+.product-details {
+    padding-top: 100px; /* Giữa menu và phần ghi chú sản phẩm */
+}
+.footer-container a {
+    margin-right: 1000px; /* hoặc sử dụng padding tùy thuộc vào thiết kế của bạn */
+}
+.note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.no-underline {
+    text-decoration: none;
+    color: #2d4271; /* Màu mặc định */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển động màu trong 0.3s */
+  }
+
+  /* Màu khi trỏ chuột vào */
+  .no-underline:hover {
+    color: blue; /* Màu khi trỏ chuột vào */
+  }
+  .col-md-3 a {
+    white-space: nowrap;
+}
+  

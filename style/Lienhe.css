@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #98c5e9;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: rgba(225, 225, 225, 0.3);
+    transition: linear 0.25s;
+}
+header:hover{
+    background: #98c5e9;
+}
+.logo{
+    flex: 1;
+}
+.menu{
+    flex: 3;
+    display: flex;
+    transition: background 0.3s ease;
+}
+.menu li a {
+    color: white;       
+    font-weight: bold;  
+    transition: all 0.3s; 
+}
+.menu > a::before{
+    content: '';
+    width: 0;
+    height: 4px;
+    background-color: #00bec1;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: linear 0.1s;
+}
+.menu li:hover a {
+    color:#2095AE !important;       
+    font-size: 20px;    
+    font-weight: bolder;
+}
+input::placeholder {
+    color: white;
+}
+.menu > li{
+    padding: 0 12px;
+    position: relative;
+}
+.menu > li:hover .sub-menu {
+    visibility: visible;
+    top: 40px;
+    width: 200px;
+    opacity: 1; /* Khi hiển thị sub-menu, set opacity là 1 */
+
+}
+.sub-menu{
+    position: absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top: 0px;
+    transition: opacity 0.3s ease-out; /* Thêm transition cho opacity */
+    z-index: 1;
+    background: #ffff;
+    opacity: 0; /* Bắt đầu với opacity là 0 */
+
+}
+.sub-menu ul{
+    padding-left: 20px;
+}
+.sub-menu li {
+    margin-bottom: 10px; /* Điều chỉnh khoảng cách giữa các dòng */
+    margin-right: -10px;
+}
+.sub-menu li ul a {
+    font-weight: normal;
+    font-size: 12px!important;
+}
+.menu  li  a {
+    font-family:'YourChosenFont', sans-serif;;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold!important;
+    display: block;
+    line-height: 20px;
+    color: #fff;
+}
+.orther{
+    flex: 1;
+    display: flex;
+}
+.orther > li {
+    padding: 0 12px;
+}
+.orther > li:first-child {
+    position: relative;
+}
+.orther > li:first-child input {
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid #98c5e9;
+    background: transparent;
+    outline: none;
+}
+.orther > li:first-child i {
+    position: absolute;
+    right: 10px;
+}
+/* slider */
+#Slider{
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+    overflow: hidden;
+}
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.3s;
+
+}
+.aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.dot-container {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.dot {
+    height: 16px;
+    width: 16px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #000;
+}
+/* Phần sản phẩm */
+.custom-heading {
+    color:#2d4271; 
+    font-size: 30px;
+    font-weight: 700;    
+    font-weight: bold; /* Độ đậm chữ */
+    margin-top: 35px; 
+    margin-bottom: 10px;
+}
+.app-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Khoảng cách giữa các cột */
+    justify-content: center; /* Căn giữa các cột */
+}
+.app-container > div {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Phần ưu đãi */
+/* CSS để tạo đường kẻ dọc */
+.vertical-line {
+    border-left: 1px solid #ccc;
+    height: 100%;
+}
+/* CSS */
+.card.mb-3 img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Đặt giá trị border-radius tùy chọn để làm tròn góc */
+}
+.card-title.tag {
+    background-color: #2d4271; /* Màu nền của phần tag */
+    color: #fff; /* Màu chữ của phần tag */
+    border-radius: 10px; /* Đặt giá trị border-radius để làm tròn góc */
+    padding: 5px 10px; /* Đặt lề và padding nếu cần thiết */
+    display: inline-block; /* Để nền chữ nhất quán với nội dung bên trong */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.custom-link {
+    color: #2d4271;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển đổi */
+  }
+.custom-link:hover {
+    background-color: #2d4271; /* Màu nền khi hover */
+    color: white;
+    transform: scale(0.6); /* Phóng to khi hover */
+    transform-origin: center;
+}
+
+.Giatien {
+    margin-top: 20px;
+    font-size: 20px; /* Điều chỉnh kích thước phông chữ theo ý muốn */
+    background-color: #dd4b39;
+    color: aliceblue;
+    padding-top: 10px;
+    padding-left: 40px; 
+    padding-bottom: 10px;
+    border-radius: 7px; /* Kích thước góc bo của nền */
+}
+
+  
+
+

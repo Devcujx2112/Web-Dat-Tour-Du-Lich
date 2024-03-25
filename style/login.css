@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Menu */
+/* .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #98c5e9;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 50px;
+  height: 70px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: #98c5e9;
+  transition: linear 0.25s;
+  margin-bottom: 100px;
+}
+.logo{
+  flex: 1;
+}
+.menu{
+  flex: 3;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: background 0.3s ease;
+}
+.menu li {
+  max-width: 150px; /* Thay đổi giá trị theo nhu cầu của bạn */
+}
+
+.menu li a {
+  color: white;       
+  font-weight: bold;  
+  transition: all 0.3s; 
+}
+.menu > a::before{
+  content: '';
+  width: 0;
+  height: 4px;
+  background-color: #00bec1;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: linear 0.25s;
+}
+.menu li:hover a {
+  color:#2095AE !important;       
+  font-size: 20px;    
+  font-weight: bolder;
+}
+input::placeholder {
+  color: black;
+}
+.menu > li{
+  padding: 0 12px;
+  position: relative;
+}
+.menu > li:hover .sub-menu {
+  visibility: visible;
+  top: 40px;
+  width: 200px;
+  height: 130px;
+}
+.sub-menu{
+  position: absolute;
+  width: 150px;
+  /* height: 100%; */
+  border: 1px solid #ccc;
+  padding: 10px 0 10px 20px;
+  visibility: hidden;
+  top: 0px;
+  transition: linear 0.3s;
+  z-index: 2;
+  background: #fff;
+}
+.sub-menu ul{
+  padding-left: 20px;
+}
+.sub-menu li {
+  margin-bottom: 10px; /* Điều chỉnh khoảng cách giữa các dòng */
+  margin-right: -10px;
+}
+.sub-menu li ul a {
+  font-weight: normal;
+  font-size: 12px!important;
+}
+.menu  li  a {
+  font-family:'YourChosenFont', sans-serif;;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold!important;
+  display: block;
+  line-height: 20px;
+  color: #fff;
+}
+/* ------------------------------------------------ */
+.menu li {
+  display: inline-block;
+  margin-right: 5px; /* Điều chỉnh giá trị này để tạo khoảng cách mong muốn */
+}
+
+.dropdown {
+  display: inline-block;
+  margin-left: 300px; /* Điều chỉnh giá trị này để tạo khoảng cách giữa menu và phần tài khoản */
+}
+
+.dropdown-submenu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* .dropdown:hover .dropdown-submenu {
+  display: block;
+} */
+.dropdown{
+  flex: 3;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: background 0.3s ease;
+}
+.dropdown li {
+  max-width: 150px; /* Thay đổi giá trị theo nhu cầu của bạn */
+}
+
+.dropdown li a {
+  color: white;       
+  font-weight: bold;  
+  transition: all 0.3s; 
+}
+.dropdown > a::before{
+  content: '';
+  width: 0;
+  height: 4px;
+  background-color: #00bec1;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: linear 0.25s;
+}
+.dropdown li:hover a {
+  color:#2095AE !important;       
+  font-size: 20px;    
+  font-weight: bolder;
+
+}
+.dropdown > li{
+  padding: 0 12px;
+  position: relative;
+  transition: linear 0.3s;
+}
+
+.dropdown > li:hover .dropdown-submenu {
+   visibility: visible;
+  opacity: 1;
+
+}
+.dropdown-submenu{
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  /* height: 100%; */
+  border: 1px solid #ccc;
+  padding: 10px 0 10px 20px;
+  /* visibility: hidden; */
+  opacity: 0;
+  top: 40px;
+  transition: linear 0.3s;
+  z-index: 2;
+  background: #fff;
+  display: block;
+}
+.dropdown-submenu ul{
+  padding-left: 20px;
+}
+.dropdown-submenu li {
+  margin-bottom: 10px; /* Điều chỉnh khoảng cách giữa các dòng */
+  margin-right: -10px;
+}
+.dropdown-submenu li a {
+  color:#2095AE !important;       
+  font-size: 20px;    
+  font-weight: bold;
+}
+.dropdown  li  a {
+  font-family:'YourChosenFont', sans-serif;;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold!important;
+  display: block;
+  line-height: 20px;
+  color: #fff;
+}
+.background-image {
+    background-image: url('https://wallpaperaccess.com/full/1431610.jpg'); /* Điều chỉnh đường dẫn ảnh theo đúng đường dẫn của bạn */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9; /* Giá trị opacity từ 0 (hoàn toàn trong suốt) đến 1 (không trong suốt) */
+    z-index: -1; /* Đặt vị trí của layer dưới cùng */
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;   
+    background: linear-gradient(to right, #00bcd4, #3f51b5); /* Màu nền của trang */
+}
+.PhanDangNhap {
+    background-color: rgba(255, 255, 255, 0.8); /* Làm cho background trở nên trong suốt hơn */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Độ rộng của form */
+    max-width: 350px; /* Độ rộng tối đa */
+}
+.container.form-user h2 {
+    color: #00796b; /* Màu tiêu đề */
+}
+.container.form-user form {
+    color: #333; /* Màu chữ của form */
+}
+.container.form-user .form-group {
+    position: relative;
+}
+.container.form-user .form-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #333; /* Màu biểu tượng */
+}
+.container.form-user span {
+    display: block;
+    margin-top: 10px;
+}
+.container.form-user a.btn {
+    display: inline-block;
+    margin-top: 10px;
+}
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+.form-group label {
+    padding-left: 40px;
+    position: relative;
+    color: #495057;
+}
+.btn-primary {
+    margin-top: 15px;
+}
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://wallpaperaccess.com/full/1431610.jpg') center center / cover no-repeat fixed;
+    z-index: -1;
+}
+.btn-primary {
+    margin-top: 15px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+.link-underline-opacity-75-hover:hover {
+    color: blue !important;
+}
+
+
+

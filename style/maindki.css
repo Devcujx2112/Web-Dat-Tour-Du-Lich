@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Menu */
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #98c5e9;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 50px;
+  height: 70px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: #98c5e9;
+  transition: linear 0.25s;
+  margin-bottom: 100px;
+}
+.logo{
+  flex: 1;
+}
+.menu{
+  flex: 3;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: background 0.3s ease;
+}
+.menu li {
+  max-width: 150px; /* Thay đổi giá trị theo nhu cầu của bạn */
+}
+
+.menu li a {
+  color: white;       
+  font-weight: bold;  
+  transition: all 0.3s; 
+}
+.menu > a::before{
+  content: '';
+  width: 0;
+  height: 4px;
+  background-color: #00bec1;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: linear 0.25s;
+}
+.menu li:hover a {
+  color:#2095AE !important;       
+  font-size: 20px;    
+  font-weight: bolder;
+}
+input::placeholder {
+  color: black;
+}
+.menu > li{
+  padding: 0 12px;
+  position: relative;
+}
+.menu > li:hover .sub-menu {
+  visibility: visible;
+  top: 40px;
+  width: 200px;
+  height: 130px;
+}
+.sub-menu{
+  position: absolute;
+  width: 150px;
+  /* height: 100%; */
+  border: 1px solid #ccc;
+  padding: 10px 0 10px 20px;
+  visibility: hidden;
+  top: 0px;
+  transition: linear 0.3s;
+  z-index: 2;
+  background: #fff;
+}
+.sub-menu ul{
+  padding-left: 20px;
+}
+.sub-menu li {
+  margin-bottom: 10px; /* Điều chỉnh khoảng cách giữa các dòng */
+  margin-right: -10px;
+}
+.sub-menu li ul a {
+  font-weight: normal;
+  font-size: 12px!important;
+}
+.menu  li  a {
+  font-family:'YourChosenFont', sans-serif;;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold!important;
+  display: block;
+  line-height: 20px;
+  color: #fff;
+}
+.orther{
+  flex: 1;
+  display: flex;
+}
+input::placeholder {
+  color: white;
+}
+.orther > li {
+  padding: 0 12px;
+}
+.orther > li:first-child {
+  position: relative;
+}
+.orther > li:first-child input {
+  width: 100%;
+  border:none;
+  border-bottom: 1px solid #98c5e9;
+  background: transparent;
+  outline: none;
+}
+ .orther > li:first-child i {
+  position: absolute;
+  right: 10px;
+ }
+ .background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://performive.com/wp-content/uploads/2020/08/shutterstock_366801260-F.jpg') center center / cover no-repeat fixed;
+  z-index: -1;
+}
+
